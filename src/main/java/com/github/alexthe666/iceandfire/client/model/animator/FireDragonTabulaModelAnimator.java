@@ -164,9 +164,7 @@ public class FireDragonTabulaModelAnimator extends IceAndFireTabulaModelAnimator
             model.bob(model.getCube("ThighL"), speed_idle, -degree_idle * 1.3F, false, ageInTicks, 1);
             model.bob(model.getCube("armR1"), speed_idle, -degree_idle * 1.3F, false, ageInTicks, 1);
             model.bob(model.getCube("armL1"), speed_idle, -degree_idle * 1.3F, false, ageInTicks, 1);
-            if (entity.getAnimation() != EntityDragonBase.ANIMATION_SHAKEPREY && entity.getAnimation() != EntityDragonBase.ANIMATION_ROAR) {
-                model.faceTarget(rotationYaw, rotationPitch, 4, neckParts);
-            }
+            model.faceTarget(rotationYaw, rotationPitch, 4, neckParts);
         }
         if (!entity.isModelDead()) {
             entity.turn_buffer.applyChainSwingBuffer(neckParts);
@@ -284,16 +282,10 @@ public class FireDragonTabulaModelAnimator extends IceAndFireTabulaModelAnimator
         model.llibAnimator.endKeyframe();
         model.llibAnimator.resetKeyframe(10);
         model.llibAnimator.setAnimation(EntityFireDragon.ANIMATION_FIRECHARGE);
-        model.llibAnimator.startKeyframe(10);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE1.firedragon_model);
+        model.llibAnimator.startKeyframe(15);
+        moveToPose(model, EnumDragonAnimations.STREAM_CHARGE.firedragon_model);
         model.llibAnimator.endKeyframe();
-        model.llibAnimator.startKeyframe(10);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE2.firedragon_model);
-        model.llibAnimator.endKeyframe();
-        model.llibAnimator.startKeyframe(5);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE3.firedragon_model);
-        model.llibAnimator.endKeyframe();
-        model.llibAnimator.resetKeyframe(5);
+        model.llibAnimator.resetKeyframe(10);
         model.llibAnimator.setAnimation(EntityFireDragon.ANIMATION_ROAR);
         model.llibAnimator.startKeyframe(10);
         moveToPose(model, EnumDragonAnimations.ROAR1.firedragon_model);
@@ -305,6 +297,5 @@ public class FireDragonTabulaModelAnimator extends IceAndFireTabulaModelAnimator
         moveToPose(model, EnumDragonAnimations.ROAR3.firedragon_model);
         model.llibAnimator.endKeyframe();
         model.llibAnimator.resetKeyframe(10);
-        model.reset();
     }
 }

@@ -296,19 +296,11 @@ public class LightningDragonTabulaModelAnimator extends IceAndFireTabulaModelAni
         model.llibAnimator.move(model.getCube("BodyUpper"), 0, -4F, 0);
         model.llibAnimator.endKeyframe();
         model.llibAnimator.resetKeyframe(10);
-
         model.llibAnimator.setAnimation(EntityLightningDragon.ANIMATION_FIRECHARGE);
-        model.llibAnimator.startKeyframe(10);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE1.lightningdragon_model);
+        model.llibAnimator.startKeyframe(15);
+        moveToPose(model, EnumDragonAnimations.STREAM_CHARGE.icedragon_model);
         model.llibAnimator.endKeyframe();
-        model.llibAnimator.startKeyframe(10);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE2.lightningdragon_model);
-        model.llibAnimator.endKeyframe();
-        model.llibAnimator.startKeyframe(5);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE3.lightningdragon_model);
-        model.llibAnimator.endKeyframe();
-        model.llibAnimator.resetKeyframe(5);
-
+        model.llibAnimator.resetKeyframe(10);
         model.llibAnimator.setAnimation(EntityLightningDragon.ANIMATION_ROAR);
         model.llibAnimator.startKeyframe(10);
         moveToPose(model, EnumDragonAnimations.ROAR1.lightningdragon_model);
@@ -320,6 +312,5 @@ public class LightningDragonTabulaModelAnimator extends IceAndFireTabulaModelAni
         moveToPose(model, EnumDragonAnimations.ROAR3.lightningdragon_model);
         model.llibAnimator.endKeyframe();
         model.llibAnimator.resetKeyframe(10);
-        model.reset();
     }
 }

@@ -7,7 +7,6 @@ import com.github.alexthe666.iceandfire.entity.EntityDragonBase;
 import com.github.alexthe666.iceandfire.entity.EntityIceDragon;
 import net.ilexiconn.llibrary.LLibrary;
 import net.ilexiconn.llibrary.client.model.tools.AdvancedModelRenderer;
-import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -320,16 +319,10 @@ public class IceDragonTabulaModelAnimator extends IceAndFireTabulaModelAnimator 
         model.llibAnimator.endKeyframe();
         model.llibAnimator.resetKeyframe(10);
         model.llibAnimator.setAnimation(EntityIceDragon.ANIMATION_FIRECHARGE);
-        model.llibAnimator.startKeyframe(10);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE1.icedragon_model);
+        model.llibAnimator.startKeyframe(15);
+        moveToPose(model, EnumDragonAnimations.STREAM_CHARGE.icedragon_model);
         model.llibAnimator.endKeyframe();
-        model.llibAnimator.startKeyframe(10);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE2.icedragon_model);
-        model.llibAnimator.endKeyframe();
-        model.llibAnimator.startKeyframe(5);
-        moveToPose(model, EnumDragonAnimations.BLAST_CHARGE3.icedragon_model);
-        model.llibAnimator.endKeyframe();
-        model.llibAnimator.resetKeyframe(5);
+        model.llibAnimator.resetKeyframe(10);
         model.llibAnimator.setAnimation(EntityIceDragon.ANIMATION_ROAR);
         model.llibAnimator.startKeyframe(10);
         moveToPose(model, EnumDragonAnimations.ROAR1.icedragon_model);
@@ -341,6 +334,5 @@ public class IceDragonTabulaModelAnimator extends IceAndFireTabulaModelAnimator 
         moveToPose(model, EnumDragonAnimations.ROAR3.icedragon_model);
         model.llibAnimator.endKeyframe();
         model.llibAnimator.resetKeyframe(10);
-        model.reset();
     }
 }

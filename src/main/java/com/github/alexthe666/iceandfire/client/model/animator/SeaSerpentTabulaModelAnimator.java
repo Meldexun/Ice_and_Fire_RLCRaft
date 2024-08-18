@@ -117,6 +117,5 @@ public class SeaSerpentTabulaModelAnimator extends IceAndFireTabulaModelAnimator
         moveToPose(model, EnumSeaSerpentAnimations.ROAR3.seaserpent_model);
         model.llibAnimator.endKeyframe();
         model.llibAnimator.resetKeyframe(10);
-        model.reset();
     }
 }
